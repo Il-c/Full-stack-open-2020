@@ -1,0 +1,9 @@
+title Fullstack tehtävä 0.6
+
+selain->palvelin: HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note_spa
+note over palvelin:
+palvelin tallentaa muistiinpanon
+taulukkoon ja palauttaa vastauksen tallennettu
+end note
+
+palvelin-->selain: {"message":"note created"}
