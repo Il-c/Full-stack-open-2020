@@ -4,6 +4,7 @@ import AddPersonForm from './components/AddPersonForm'
 import ShowPersons from './components/ShowPersons'
 import Notification from './components/Notification'
 import personService from './services/persons'
+require('express-async-errors')
 import './index.css'
 
 
@@ -31,7 +32,6 @@ const App = () => {
     }
     
     if(persons.map(person => person.name).includes(newName)){
-      
       if(window.confirm(`${newName} is already added to phonebook, replace the old number with a new one?`)){
         const person = persons.find(person=>person.name===newName)
         const changedPerson = {...person, number: newNumber}
@@ -52,6 +52,10 @@ const App = () => {
           setNewNumber('')
           showMessage(`${newName} added!`, 'info')
         })
+      .catch(error => {
+        console.log(error.response.data)
+        showMessage(JSON.stringify(error.response.data), 'error')
+      })
     
   }
 

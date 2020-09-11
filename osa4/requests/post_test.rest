@@ -1,0 +1,11 @@
+POST http://localhost:3001/api/blogs
+Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImxlaHRpbmVpIiwiaWQiOiI1ZjVhNGRjYjlkYzg5MjJkZjgwNTRhYjgiLCJpYXQiOjE1OTk3NTg3MTB9.X1BChJlp0i1-KLaGWSTewkTXxqCPApUU3u4nSANEDr8
+
+{
+  "title": "Ufghj",
+  "author": "Ptutu",
+  "url": "http://www.blogi.net",
+  "likes": 3,
+  "user":"rft5u8"
+}

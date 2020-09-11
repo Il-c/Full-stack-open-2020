@@ -35,5 +35,9 @@
   },
   "devDependencies": {
     "json-server": "^0.16.1"
-  }
+  },
+  "engines": {
+    "node": "12.18.3"
+  },
+  "proxy": "http://localhost:3001"
 }
